@@ -36,26 +36,31 @@ game_dict = {'rock': rock, 'paper': paper, 'scissors': scissors}
 # ask player to pick their play
 play1 = input('Pick your play:\nrock\npaper\nscissors\n\n')
 # print corressponding image from game_dict
-print(f"You play:\n{game_dict[play1]}")
 
 # randomly generate play of computer
 comp_choice = ['rock', 'paper', 'scissors']
 computer1 = random.choice(comp_choice)
-# display corresponding image
-print(f"Computer plays:\n {game_dict[computer1]}")
 
-# determine winner based on plays
-if play1 == computer1:
-    print('Draw!')
-elif play1 == 'rock':
-    if computer1 == 'scissors':
-        print('You win.')  
-    print('Computer wins.')
-elif play1 == 'scissors':
-    if computer1 == 'paper':
-        print('You win.')
-    print('Computer wins.')
-elif play1 == 'paper':
-    if computer1 == 'rock':
-        print('You win')
-    print('Computer wins.')
+
+# check if valid entry
+if play1 not in comp_choice:
+    print('You did not make a valid entry. You lose.')
+else:
+    # display corresponding image
+    print(f"You play:\n{game_dict[play1]}")
+    print(f"Computer plays:\n {game_dict[computer1]}") 
+    # determine winner based on plays 
+    if play1 == computer1:
+        print('Draw!')
+    elif play1 == 'rock':
+        if computer1 == 'scissors':
+            print('You win.')  
+        print('Computer wins.')
+    elif play1 == 'scissors':
+        if computer1 == 'paper':
+            print('You win.')
+        print('Computer wins.')
+    elif play1 == 'paper':
+        if computer1 == 'rock':
+            print('You win')
+        print('Computer wins.')
