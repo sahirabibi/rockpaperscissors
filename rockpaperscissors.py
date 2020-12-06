@@ -49,16 +49,13 @@ if play1 == computer1:
     print('Draw!')
 elif play1 == 'rock':
     if computer1 == 'scissors':
-        print('You win.')
-    elif computer1 == 'paper':
-        print('Computer wins.')
+        print('You win.')  
+    print('Computer wins.')
 elif play1 == 'scissors':
     if computer1 == 'paper':
         print('You win.')
-    elif computer1 == 'rock':
-        print('Computer wins.')
+    print('Computer wins.')
 elif play1 == 'paper':
     if computer1 == 'rock':
         print('You win')
-    elif computer1 == 'scissors':
-        print('Computer wins.')
+    print('Computer wins.')
